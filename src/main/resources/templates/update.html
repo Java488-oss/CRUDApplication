@@ -12,8 +12,14 @@
 <div class="mt-3 mx-auto" >
     <div class="position-relative vertical-center">
         <div class="">
+
             <div class="myHeader">
-                <h2 class="mt-2">Add user for application</h2>
+                <div class="d-flex justify-content-end mt-0 ">
+                    <form action="#" th:action="@{/}" th:method="get">
+                        <button type="submit" class="btn btn-primary" id="buttonId"><i class="fa fa-home"></i>   Домой</button>
+                    </form>
+                </div>
+                <h2 class="mt-2">Edit user for application</h2>
             </div>
 
             <table class="table table-bordered table-hover">
@@ -28,13 +34,14 @@
                 <tbody class="text-center" >
                 <div>
                     <tr>
-                        <form action="#" th:action="@{/update/{id}(id=${userList.id})}"
-                              th:object="${userModel}"
+                        <form action="#"
+                              th:action="@{/update/{id}(id=${userList.id})}"
+                              th:object="${userList}"
                               method="post">
                             <td></td>
                             <td> <input type="text" name="user" th:field="*{user}" placeholder="Enter user name" value=""> </td>
                             <td> <input type="text" name="pass" th:field="*{pass}" placeholder="Enter your password" value=""> </td>
-                            <td><button type="submit" class="btn btn-primary" id="buttonEdit"><i class="fa fa-update"> Обновить</i></button></td>
+                            <td><button type="submit" class="btn btn-primary" id="buttonEdit"><i class="fa fa-save"> Обновить</i></button></td>
                         </form>
                     </tr>
                 </div>

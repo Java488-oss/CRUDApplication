@@ -4,12 +4,13 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "[User]",schema = "dbo",catalog = "Mobile")
+@Table(name = "[User]",schema = "dbo",catalog = "Test")
 @Entity
 @Data
 public class UserModel {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 

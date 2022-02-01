@@ -1,9 +1,7 @@
 package com.example.CRUDApplication.Services;
 
-import com.example.CRUDApplication.Model.EmployListModel;
 import com.example.CRUDApplication.Model.UserModel;
 import com.example.CRUDApplication.Repository.UserRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
