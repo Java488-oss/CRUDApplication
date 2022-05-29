@@ -17,7 +17,6 @@ public class UserController {
 
     private final UserService userService;
 
-    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -35,7 +34,6 @@ public class UserController {
     public String getsave(UserModel userModel){
         return "addUser";
     }
-
 
     @PostMapping("/addUser")
     public String save(@Valid UserModel userModel, BindingResult result, Model model){
